@@ -13,4 +13,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     wget \
     unzip \
     tar
-#RUN    default-jdk
+
+
+RUN pip3 install -U pip
+
+ADD requirements.txt /app/requirements.txt
+RUN apt-get install -y default-jdk
