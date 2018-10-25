@@ -12,5 +12,5 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     wkhtmltopdf \
     wget \
     unzip \
-    tar \
-    default-jdk
+    tar
+#RUN    default-jdk
