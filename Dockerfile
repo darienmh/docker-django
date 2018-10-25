@@ -17,8 +17,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     gunicorn \
     libfontconfig \
     wkhtmltopdf \
-    nano \
-    wget \
     unzip \
     tar
     #&& \
