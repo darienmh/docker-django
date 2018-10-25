@@ -4,7 +4,7 @@ MAINTAINER Juan Darien Macías Hernández <darienmh@gmail.com>
 
 WORKDIR /app/
 
-RUN apt-get update && apt-get install -y --no-install-recommends \
+RUN mkdir app && apt-get update && apt-get install -y --no-install-recommends \
     python3-dev \
     libsasl2-dev \
     python-dev \
