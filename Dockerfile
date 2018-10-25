@@ -7,7 +7,7 @@ WORKDIR /app/
 ADD requirements.txt /app/requirements.txt
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
-#    default-jdk
+    default-jdk
     python-dev \
     python3-dev \
     python3-ldap3 \
@@ -17,13 +17,23 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     gunicorn \
     libfontconfig \
     wkhtmltopdf \
+    nano \
     wget \
     unzip \
-    tar &&
-    apt-get install -y --no-install-recommends default-jdk
+    tar
+    #&& \
+    #apt-get install -y --no-install-recommends default-jdk
 
 # install python dependencies
 RUN pip3 install -r /app/requirements.txt
+
+# -----------------------------------------------------------------------------
+# Clean up
+# -----------------------------------------------------------------------------
+RUN apt-get clean && \
+  apt-get autoclean && \
+  rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+
 
 # create unprivileged user
 RUN adduser --disabled-password --gecos '' sipacuser
