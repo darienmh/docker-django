@@ -21,7 +21,7 @@ djradicale==0.0.13
 factory-boy==2.9.2
 Faker==0.8.6
 #gevent==1.2.1
-#greenlet==0.4.12
+greenlet==0.4.12
 gunicorn==19.7.1
 icalendar==3.11.5
 kombu==4.0.2
