@@ -7,7 +7,7 @@ WORKDIR /app/
 ADD requirements.txt /app/requirements.txt
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
-    default-jdk
+    default-jdk \
     python-dev \
     python3-dev \
     python3-ldap3 \
