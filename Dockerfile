@@ -25,7 +25,7 @@ RUN pip3 install -U pip
 RUN apt-get install -y default-jdk
 
 # install python dependencies
-RUN pip3 install -r app/requirements.txt
+RUN pip3 install -r /app/requirements.txt
 
 # create unprivileged user
 RUN adduser --disabled-password --gecos '' sipacuser
