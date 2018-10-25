@@ -18,7 +18,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     libfontconfig \
     wkhtmltopdf \
     unzip \
-    gcc \
+    g++ \
+    make \
+    libc-dev \
     tar
     #&& \
     #apt-get install -y --no-install-recommends default-jdk
