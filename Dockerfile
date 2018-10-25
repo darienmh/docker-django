@@ -1,4 +1,4 @@
-FROM python:3.7-stretch
+FROM ubuntu
 
 MAINTAINER Juan Darien Macías Hernández <darienmh@gmail.com>
 
@@ -18,9 +18,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     libfontconfig \
     wkhtmltopdf \
     unzip \
-    g++ \
-    make \
-    libc-dev \
+    libevent-dev \
     tar
     #&& \
     #apt-get install -y --no-install-recommends default-jdk
