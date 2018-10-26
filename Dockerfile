@@ -14,13 +14,13 @@ RUN set -ex \
     && apk add --no-cache --virtual .persistent-deps \
         python-dev \
         python3-dev \
-        python3-ldap3 \
-        libldap2-dev \
-        libssl-dev \
-        libsasl2-dev \
-        gunicorn \
-        libfontconfig \
-        wkhtmltopdf \
+#        python3-ldap3 \
+#        libldap2-dev \
+#        libssl-dev \
+#        libsasl2-dev \
+#        gunicorn \
+#        libfontconfig \
+#        wkhtmltopdf \
 
     # Install Python Dependencies
     && pip3 install -r /app/requirements.txt \
