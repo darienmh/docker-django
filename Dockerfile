@@ -4,35 +4,26 @@ MAINTAINER Juan Darien Macías Hernández <darienmh@gmail.com>
 
 WORKDIR /app/
 
+# Add Python Dependencies
 ADD requirements.txt /app/requirements.txt
 
-RUN apt-get update && apt-get install -y --no-install-recommends \
-    default-jdk \
-    python-dev \
-    python3-dev \
-    python3-ldap3 \
-    libldap2-dev \
-    libssl-dev \
-    libsasl2-dev \
-    gunicorn \
-    libfontconfig \
-    wkhtmltopdf \
-    unzip \
-    libevent-dev \
-    tar
-    #&& \
-    #apt-get install -y --no-install-recommends default-jdk
 
-# install python dependencies
-RUN pip3 install -r /app/requirements.txt
-
-# -----------------------------------------------------------------------------
-# Clean up
-# -----------------------------------------------------------------------------
-RUN apt-get clean && \
-  apt-get autoclean && \
-  rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
-
-
-# create unprivileged user
-RUN adduser --disabled-password --gecos '' sipacuser
+RUN set -ex \
+    && apt-get update \
+    # Install Tools
+    && apt-get install -y --no-install-recommends \
+        python-dev \
+        python3-dev \
+        python3-ldap3 \
+        libldap2-dev \
+        libssl-dev \
+        libsasl2-dev \
+        gunicorn \
+        libfontconfig \
+        wkhtmltopdf \
+    # Install Python Dependencies
+    && pip3 install -r /app/requirements.txt
+    # Clean up
+    && apt-get clean \
+    && apt-get autoclean \
+    && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
