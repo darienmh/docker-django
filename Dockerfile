@@ -9,6 +9,7 @@ ADD requirements.txt /app/requirements.txt
 
 
 RUN set -ex \
+    \
     && apt-get update \
     # Install Tools
     && apt-get install -y --no-install-recommends \
