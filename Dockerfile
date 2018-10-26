@@ -11,7 +11,7 @@ RUN set -ex \
     && apk update \
 
     # Install Tools
-    && && apk add --no-cache --virtual .persistent-deps \
+    && apk add --no-cache --virtual .persistent-deps \
         python-dev \
         python3-dev \
         python3-ldap3 \
