@@ -7,10 +7,8 @@ WORKDIR /app/
 # Add Python Dependencies
 ADD requirements.txt /app/requirements.txt
 
+RUN apt-get update \
 
-RUN set -ex \
-    \
-    && apt-get update \
     # Install Tools
     && apt-get install -y --no-install-recommends \
         python-dev \
@@ -22,8 +20,10 @@ RUN set -ex \
         gunicorn \
         libfontconfig \
         wkhtmltopdf \
+
     # Install Python Dependencies
     && pip3 install -r /app/requirements.txt
+
     # Clean up
     && apt-get clean \
     && apt-get autoclean \
