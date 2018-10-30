@@ -7,12 +7,12 @@ WORKDIR /app/
 # Add Python Dependencies
 ADD requirements.txt /app/requirements.txt
 
-
 RUN set -ex \
     && apt-get update \
 
     # Install Tools
     && apt-get install -y --no-install-recommends \
+        default-jdk \
         python-dev \
         python3-dev \
         python3-ldap3 \
