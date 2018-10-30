@@ -31,7 +31,7 @@ RUN set -ex \
         libsasl \
         py-gunicorn \
 
-#wkhtmltopdf
+        #WkHtmltoPdf
         libxrender \
         fontconfig \
         libx11 \
@@ -46,7 +46,7 @@ RUN set -ex \
         ttf-freefont \
         ttf-liberation \
         ttf-ubuntu-font-family \
-        wkhtmltopdf \
+#        wkhtmltopdf \
 
     # Install Python Dependencies
 #    && pip3 install python-ldap
