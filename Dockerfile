@@ -49,8 +49,7 @@ RUN set -ex \
 #        wkhtmltopdf \
 
     # Install Python Dependencies
-#    && pip3 install python-ldap
-#    && pip3 install -r /app/requirements.txt \
+    && pip3 install -r /app/requirements.txt \
 #
 #    # Clean up
 #    && apt-get clean \
