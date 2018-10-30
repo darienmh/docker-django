@@ -28,12 +28,25 @@ RUN set -ex \
         python-dev \
         python3-dev \
         py3-ldap3 \
-#        libldap2-dev \
-#        libssl-dev \
-#        libsasl2-dev \
-#        gunicorn \
-#        libfontconfig \
-#        wkhtmltopdf \
+        libsasl \
+        py-gunicorn \
+
+#wkhtmltopdf
+        libxrender \
+        fontconfig \
+        libx11 \
+        libxext \
+        libintl \
+        glib \
+        libgcc \
+        libstdc++ \
+        ttf-freefont \
+        ttf-dejavu \
+        ttf-droid \
+        ttf-freefont \
+        ttf-liberation \
+        ttf-ubuntu-font-family \
+        wkhtmltopdf \
 
     # Install Python Dependencies
 #    && pip3 install python-ldap
