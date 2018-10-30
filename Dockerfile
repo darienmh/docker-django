@@ -24,7 +24,7 @@ RUN set -ex \
 #
 #    # Install Tools
     && apk add --no-cache --virtual .persistent-deps \
-        openjdk8
+        openjdk8 \
         python-dev \
         python3-dev \
 #        python3-ldap3 \
