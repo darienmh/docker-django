@@ -29,4 +29,9 @@ RUN set -ex \
     # Clean up
     && apt-get clean \
     && apt-get autoclean \
-    && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+    && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \
+
+    && adduser --disabled-password --gecos '' sipacuser \
+
+    && mkdir -p /var/log/gunicorn \
+    && chown -R sipacuser /var/log/gunicorn
