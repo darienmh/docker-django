@@ -7,8 +7,6 @@ WORKDIR /app/
 # Add Python Dependencies
 ADD requirements.txt /app/requirements.txt
 
-ENV JAVA_VERSION "8u192"
-
 RUN set -ex \
     && apk update \
 
@@ -16,9 +14,8 @@ RUN set -ex \
     		gnupg \
     		tar \
     		xz \
-    		openjdk8 \
+#    		openjdk8 \
 
-    && wget -O python.tar.xz "http://download.oracle.com/otn-pub/java/jdk/$JAVA_VERSION-b12/750e1c8617c5452694857ad95c3ee230/jdk-$JAVA_VERSION-linux-x64.tar.gz" \
 #    mkdir -p /opt/java
 #    cd /opt/java
 #    sudo tar -zxvf XXX-XXX-linux-x64.tar.gz
@@ -26,10 +23,10 @@ RUN set -ex \
 #    && export GNUPGHOME="$(mktemp -d)" \
 #
 #    # Install Tools
-#    && apk add --no-cache --virtual .persistent-deps \
-#        default-jdk
-#        python-dev \
-#        python3-dev \
+    && apk add --no-cache --virtual .persistent-deps \
+        openjdk8
+        python-dev \
+        python3-dev \
 #        python3-ldap3 \
 #        libldap2-dev \
 #        libssl-dev \
