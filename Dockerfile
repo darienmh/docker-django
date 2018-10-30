@@ -12,6 +12,7 @@ RUN set -ex \
 
     # Install Tools
     && apk add --no-cache --virtual .persistent-deps \
+        default-jdk
         python-dev \
         python3-dev \
 #        python3-ldap3 \
@@ -28,5 +29,9 @@ RUN set -ex \
     # Clean up
     && apt-get clean \
     && apt-get autoclean \
-    && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+    && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \
 
+    && adduser --disabled-password --gecos '' sipacuser \
+
+    && mkdir -p /var/log/gunicorn \
+    && chown -R sipacuser /var/log/gunicorn
