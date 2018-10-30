@@ -48,8 +48,8 @@ RUN set -ex \
         ttf-ubuntu-font-family \
 #        wkhtmltopdf \
 
-        #psycopg2 dependencie
-        libpq
+        # psycopg2 dependencie
+        libpq \
 
     # Install Python Dependencies
     && pip3 install -r /app/requirements.txt \
