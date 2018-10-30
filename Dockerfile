@@ -27,8 +27,8 @@ RUN set -ex \
         openjdk8 \
         python-dev \
         python3-dev \
-        python3-ldap3 \
-        libldap2-dev \
+#        python3-ldap3 \
+#        libldap2-dev \
 #        libssl-dev \
 #        libsasl2-dev \
 #        gunicorn \
@@ -36,6 +36,7 @@ RUN set -ex \
 #        wkhtmltopdf \
 
     # Install Python Dependencies
+    && pip3 install python-ldap
 #    && pip3 install -r /app/requirements.txt \
 #
 #    # Clean up
