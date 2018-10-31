@@ -14,7 +14,12 @@ RUN set -ex \
     		gnupg \
     		tar \
     		xz \
-#    		openjdk8 \
+            autoconf \
+            file \
+            g++ \
+            make \
+            libc-dev \
+            pkgconf \
 
 #    mkdir -p /opt/java
 #    cd /opt/java
