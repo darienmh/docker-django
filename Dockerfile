@@ -56,6 +56,8 @@ RUN set -ex \
         # psycopg2 dependencie
         libpq \
 
+        openldap \
+
     # Install Python Dependencies
     && pip3 install python-ldap \
     && pip3 install -r /app/requirements.txt \
