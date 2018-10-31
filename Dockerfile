@@ -57,6 +57,7 @@ RUN set -ex \
         libpq \
 
     # Install Python Dependencies
+    && pip3 install python-ldap \
     && pip3 install -r /app/requirements.txt \
 #
 #    # Clean up
