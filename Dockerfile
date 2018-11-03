@@ -1,4 +1,4 @@
-FROM python:3.7-stretch
+FROM python:3.5-stretch
 
 MAINTAINER Juan Darien Macías Hernández <darienmh@gmail.com>
 
