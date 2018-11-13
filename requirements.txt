@@ -55,3 +55,4 @@ openpyxl
 xlrd
 django-password-manager
 djangorestframework-timed-auth-token
+django-notifications-hq==1.5
