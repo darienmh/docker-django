@@ -1,4 +1,4 @@
-FROM python:3.6-stretch
+FROM python:3.5-stretch
 
 MAINTAINER Juan Darien Macías Hernández <darienmh@gmail.com>
 
@@ -22,6 +22,7 @@ RUN set -ex \
         gunicorn \
         libfontconfig \
         wkhtmltopdf \
+        unzip \
 
     # Install Python Dependencies
     && pip3 install -r /app/requirements.txt \
